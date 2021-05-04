@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="estudio"
+            type="com.alcanosesp.appalcanos.db.entity.Estudio" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.EstudioFormularioFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                style="@style/contenedorBloques"
+                android:id="@+id/formulario_estudios">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_niveleducativo_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_estudio_niveleducativo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_estudio_niveleducativo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_inseducativa_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_estudio_institucion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{estudio.institucion}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_estudio_institucion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_estado_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_estudio_estado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_estudio_estado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_pais_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_estudio_pais"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_estudio_pais"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_fechainicio_requerido" />
+
+                    <EditText
+                        style="@style/campoFecha"
+                        android:id="@+id/et_estudio_fechainicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@{estudio.fechaInicio}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_estudio_fechainicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:id="@+id/bloque_fecha_fin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_fechafin" />
+
+                    <EditText
+                        style="@style/campoFecha"
+                        android:id="@+id/et_estudio_fechafin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@{estudio.fechaFin}"/>
+
+                    <TextView
+                        android:id="@+id/msg_error_estudio_fechafin"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_ntarjetaprof" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_estudio_ntarjetaprof"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="20"
+                        android:inputType="textCapCharacters"
+                        android:text="@{estudio.tarjetaProfesional}"/>
+
+                    <TextView
+                        android:id="@+id/msg_error_estudio_ntarjetaprof"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_profesion" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_estudio_profesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="960dp" />
+
+                    <TextView
+                        android:id="@+id/msg_error_estudio_profesion"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_estudio_titulo_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_estudio_titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{estudio.titulo}"/>
+
+                    <TextView
+                        android:id="@+id/msg_error_estudio_titulo"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@id/et_estudio_observaciones"
+                        android:text="@string/info_estudio_observacion" />
+
+                    <EditText
+                        android:id="@+id/et_estudio_observaciones"
+                        style="@style/campoTextoArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{estudio.observacion}"/>
+
+                    <TextView
+                        android:id="@+id/msg_error_estudio_observaciones"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_guardar_estudio"
+                    style="@style/botonConfirmacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

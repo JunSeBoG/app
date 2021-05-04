@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="experiencia"
+            type="com.alcanosesp.appalcanos.db.entity.Experiencia" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.ExperienciaFormularioFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                style="@style/contenedorBloques"
+                android:id="@+id/formulario_experiencia">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_nombrecargo_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_experiencia_cargo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{experiencia.cargo}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_cargo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_nombreempresa_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_experiencia_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{experiencia.empresa}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_telefono_requerido" />
+
+                    <EditText
+                        style="@style/campoTelefono"
+                        android:id="@+id/et_experiencia_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:text="@{experiencia.telefono}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_salario" />
+
+                    <EditText
+                        style="@style/campoMoneda"
+                        android:id="@+id/et_experiencia_salario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text="@{experiencia.salario}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_salario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_jefeinmediato" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_experiencia_jefeinmediato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{experiencia.jefeInmediato}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_jefeinmediato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_trabajaactualmente_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/et_experiencia_trabaja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/msg_error_experiencia_trabaja"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_fechainicio_requerido" />
+
+                    <EditText
+                        style="@style/campoFecha"
+                        android:id="@+id/et_experiencia_fecha_inicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{experiencia.fechaInicio}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_fechainicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:id="@+id/bloque_fecha_fin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_fechafin" />
+
+                    <EditText
+                        style="@style/campoFecha"
+                        android:id="@+id/et_experiencia_fechafin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{experiencia.fechaFin}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_fechafin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_funciones" />
+
+                    <EditText
+                        style="@style/campoTextoArea"
+                        android:id="@+id/et_experiencia_funciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{experiencia.funciones}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_funciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motivo de retiro" />
+
+                    <EditText
+                        style="@style/campoTextoArea"
+                        android:id="@+id/et_experiencia_motivoretiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{experiencia.motivoRetiro}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_motivoretiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_observaciones" />
+
+                    <EditText
+                        style="@style/campoTextoArea"
+                        android:id="@+id/et_experiencia_observaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{experiencia.observaciones}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_experiencia_observaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    style="@style/botonConfirmacion"
+                    android:id="@+id/btn_guardar_experiencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

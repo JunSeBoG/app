@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--DATOS BASICOS-->
+    <string name="datos_basicos_primer_apellido">Primer apellido</string>
+    <string name="datos_basicos_sexo">Sexo</string>
+    <string name="datos_basicos_primer_nombre">Primer nombre</string>
+    <string name="datos_basicos_ocupacion">Ocupación</string>
+    <string name="datos_basicos_segundo_nombre">Segundo nombre</string>
+    <string name="datos_basicos_segundo_apellido">Segundo apellido</string>
+    <string name="datos_basicos_estado_civil">Estado civil</string>
+    <string name="datos_basicos_estado">Estado</string>
+
+    <string name="datos_basicos_nacimiento">Nacimiento</string>
+    <string name="datos_basicos_fecha_nacimiento">Fecha</string>
+    <string name="datos_basicos_departamento_nacimiento">Departamento</string>
+    <string name="datos_basicos_pais_nacimiento">País</string>
+    <string name="datos_basicos_municipio_nacimiento">Municipio</string>
+
+    <string name="datos_basicos_identificacion">Identificación</string>
+    <string name="datos_basicos_tipo_identificacion">Tipo</string>
+    <string name="datos_basicos_expedicion_identificacion">Expedición</string>
+    <string name="datos_basicos_departamento_identificacion">Departamento</string>
+    <string name="datos_basicos_nit">Nit</string>
+    <string name="datos_basicos_numero_identificacion">Número</string>
+    <string name="datos_basicos_pais_identificacion">País</string>
+    <string name="datos_basicos_municipio_identificacion">Municipio</string>
+    <string name="datos_basicos_dv_identificacion">DV</string>
+
+    <string name="datos_basicos_residencia">Residencia</string>
+    <string name="datos_basicos_pais_residencia">País</string>
+    <string name="datos_basicos_municipio_residencia">Municipio</string>
+    <string name="datos_basicos_telefono_fijo">Teléfono fijo</string>
+    <string name="datos_basicos_departamento_residencia">Departamento</string>
+    <string name="datos_basicos_celular">Celular</string>
+    <string name="datos_basicos_tipo_vivienda">Tipo vivienda</string>
+    <string name="datos_basicos_direccion">Dirección</string>
+
+    <string name="datos_basicos_libreta">Libreta militar</string>
+    <string name="datos_basicos_clase_libreta">Clase</string>
+    <string name="datos_basicos_distrito_libreta">Distrito</string>
+    <string name="datos_basicos_numero_libreta">Número libreta</string>
+
+    <string name="datos_basicos_licencia">Licencia de conducción</string>
+
+    <string name="datos_basicos_otros">Otros</string>
+    <string name="datos_basicos_talla_camisa">Talla camisa</string>
+    <string name="datos_basicos_numero_calzado">Número calzado</string>
+    <string name="datos_basicos_tipo_sangre">Tipo de sangre</string>
+    <string name="datos_basicos_talla_pantalon">Talla pantalón</string>
+    <string name="datos_basicos_lentes">¿Usa lentes?</string>
+    <string name="datos_basicos_correo_personal">Correo personal</string>
+    <string name="datos_basicos_correo_corporativo">Correo corporativo</string>
+
+    <string name="datos_basicos_pais_residencia_requerido">País *</string>
+    <string name="datos_basicos_municipio_residencia_requerido">Municipio *</string>
+    <string name="datos_basicos_departamento_residencia_requerido">Departamento *</string>
+    <string name="datos_basicos_celular_requerido">Celular *</string>
+    <string name="datos_basicos_tipo_vivienda_requerido">Tipo vivienda *</string>
+    <string name="datos_basicos_direccion_requerido">Dirección *</string>
+    <string name="datos_basicos_lentes_requerido">¿Usa lentes? *</string>
+
+
+    <!--INFORMACION FAMILIAR-->
+    <string name="info_familiar_emptystate">Aún no has ingresado información. Para registrar tus datos familiares, pulsa el botón (+).</string>
+
+    <string name="info_familiar_primerNombre">Primer nombre</string>
+    <string name="info_familiar_segundoNombre">Segundo nombre</string>
+    <string name="info_familiar_primerApellido">Primer apellido</string>
+    <string name="info_familiar_segundoApellido">Segundo apellido</string>
+    <string name="info_familiar_sexo">Sexo</string>
+    <string name="info_familiar_parentesco">Parentesco</string>
+    <string name="info_familiar_dependiente">Dependiente</string>
+    <string name="info_familiar_tipoDocumento">Tipo documento</string>
+    <string name="info_familiar_nDocumento">N° documento</string>
+    <string name="info_familiar_nivelEducativo">Nivel educativo</string>
+    <string name="info_familiar_fechaNacimiento">Fecha nacimiento</string>
+    <string name="info_familiar_paisResidencia">País residencia</string>
+    <string name="info_familiar_deptoResidencia">Depto residencia</string>
+    <string name="info_familiar_mpioResidencia">Mpio residencia</string>
+    <string name="info_familiar_celular">Celular</string>
+    <string name="info_familiar_telefonoFijo">Teléfono fijo</string>
+    <string name="info_familiar_direccion">Dirección</string>
+
+    <string name="info_familiar_primerNombre_requerido">Primer nombre *</string>
+    <string name="info_familiar_primerApellido_requerido">Primer apellido *</string>
+    <string name="info_familiar_sexo_requerido">Sexo *</string>
+    <string name="info_familiar_parentesco_requerido">Parentesco *</string>
+    <string name="info_familiar_dependiente_requerido">Dependiente *</string>
+    <string name="info_familiar_tipoDocumento_requerido">Tipo documento *</string>
+    <string name="info_familiar_nDocumento_requerido">N° documento *</string>
+    <string name="info_familiar_nivelEducativo_requerido">Nivel educativo *</string>
+    <string name="info_familiar_fechaNacimiento_requerido">Fecha nacimiento *</string>
+    <string name="info_familiar_paisResidencia_requerido">País residencia *</string>
+    <string name="info_familiar_deptoResidencia_requerido">Departamento residencia *</string>
+    <string name="info_familiar_mpioResidencia_requerido">Municipio residencia *</string>
+    <string name="info_familiar_celular_requerido">Celular *</string>
+    <string name="info_familiar_direccion_requerido">Dirección *</string>
+
+
+    <!--ESTUDIOS REALIZADOS -->
+    <string name="info_estudios_emptystate">Aún no has ingresado información. Para registrar tus estudios, pulsa el botón (+).</string>
+
+    <string name="info_estudio_niveleducativo">Nivel educativo</string>
+    <string name="info_estudio_inseducativa">Ins. educativa</string>
+    <string name="info_estudio_estado">Estado</string>
+    <string name="info_estudio_pais">País</string>
+    <string name="info_estudio_fechainicio">Fecha de inicio</string>
+    <string name="info_estudio_fechafin">Fecha fin</string>
+    <string name="info_estudio_profesion">Profesión</string>
+    <string name="info_estudio_ntarjetaprof">N° tarjeta prof.</string>
+    <string name="info_estudio_titulo">Título</string>
+    <string name="info_estudio_nota">Nota</string>
+
+    <string name="info_estudio_niveleducativo_requerido">Nivel educativo *</string>
+    <string name="info_estudio_inseducativa_requerido">Ins. educativa *</string>
+    <string name="info_estudio_estado_requerido">Estado *</string>
+    <string name="info_estudio_pais_requerido">País *</string>
+    <string name="info_estudio_fechainicio_requerido">Fecha de inicio *</string>
+    <string name="info_estudio_titulo_requerido">Título *</string>
+    <string name="info_estudio_observacion">Observacion</string>
+
+
+    <!--EXPERIENCIA LABORAL-->
+    <string name="info_experiencia_emptystate">Aún no has ingresado información. Para registrar tu experiencia laboral, pulsa el botón (+).</string>
+
+    <string name="info_experiencia_nombrecargo">Nombre del cargo</string>
+    <string name="info_experiencia_nombreempresa">Empresa</string>
+    <string name="info_experiencia_telefono">Teléfono</string>
+    <string name="info_experiencia_trabajaactualmente">Trabaja actualmente</string>
+    <string name="info_experiencia_fechainicio">Fecha de Inicio</string>
+    <string name="info_experiencia_fechafin">Fecha fin</string>
+    <string name="info_experiencia_salario">Salario</string>
+    <string name="info_experiencia_jefeinmediato">Jefe inmediato</string>
+    <string name="info_experiencia_motivoretiro">Motivo de retiro</string>
+    <string name="info_experiencia_funciones">Funciones</string>
+    <string name="info_experiencia_observaciones">Observaciones</string>
+
+    <string name="info_experiencia_nombrecargo_requerido">Nombre del cargo *</string>
+    <string name="info_experiencia_nombreempresa_requerido">Empresa *</string>
+    <string name="info_experiencia_telefono_requerido">Teléfono *</string>
+    <string name="info_experiencia_trabajaactualmente_requerido">Trabaja actualmente *</string>
+    <string name="info_experiencia_fechainicio_requerido">Fecha de Inicio *</string>
+
+    <string name="guardar">Guardar</string>
+    <string name="estado_registro">Estado</string>
+    <string name="justificacion_registro">Justificación</string>
+    <string name="fechaVencimiento">Fecha vencimiento</string>
+    <string name="licencia_categoria_a">Categoria A</string>
+    <string name="licencia_categoria_b">Categoria B</string>
+    <string name="licencia_categoria_c">Categoria C</string>
+
+
+    <string name="beneficios_emptystate">Aún no has ingresado información. Para realizar una solicitud de beneficio, pulsa el botón (+).</string>
+</resources>

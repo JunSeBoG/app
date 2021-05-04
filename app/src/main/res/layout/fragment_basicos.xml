@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="funcionario"
+            type="com.alcanosesp.appalcanos.db.entity.Funcionario" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.datos_personales.datos_basicos.BasicosFragment">
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <!--CONTENEDOR PRINCIPAL-->
+            <LinearLayout
+                style="@style/bloqueSolo">
+
+                <!--Visualizacion-->
+                <LinearLayout
+                    style="@style/bloqueSolo"
+                    android:id="@+id/visualizacionDatosBasicos">
+
+                    <!--Titulo-->
+                    <!--Visualizacion-->
+
+                    <!--NOMBRES Y OCUPACION-->
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_primer_nombre" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.primerNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_segundo_nombre" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.segundoNombre)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_primer_apellido" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.primerApellido}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_segundo_apellido" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.segundoApellido)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_sexo" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.sexoNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_estado_civil" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.estadoCivilNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_ocupacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.ocupacionNombre)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_estado" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.estado}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--NACIMIENTO-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_child"
+                            android:text="@string/datos_basicos_nacimiento" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_fecha_nacimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.fechaNacimiento}" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_pais_nacimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.paisOrigenNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_departamento_nacimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.departamentoOrigenNombre}" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_municipio_nacimiento" />
+
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.municipioOrigenNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--IDENTIFICACION-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_card"
+                            android:text="@string/datos_basicos_identificacion"  />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_tipo_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.tipoDocumentoNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_numero_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.numeroDocumento}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_expedicion_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.fechaExpedicionDocumento}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_pais_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.paisExpedicionDocumentoNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_departamento_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.departamentoExpedicionDocumentoNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_municipio_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.municipioExpedicionDocumentoNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_nit" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.nit}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_dv_identificacion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.digitoVerificacion}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--RESIDENCIA-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_home"
+                            android:text="@string/datos_basicos_residencia" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_pais_residencia" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.paisResidenciaNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_departamento_residencia" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.departamentoResidenciaNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_municipio_residencia" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.municipioResidenciaNombre}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_celular" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.celular}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_telefono_fijo" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.telefonoFijo)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_tipo_vivienda" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.tipoViviendaNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueSolo">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_direccion" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.direccion}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--LIBRETA MILITAR-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_assignment_ind"
+                            android:text="@string/datos_basicos_libreta"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_clase_libreta" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.claseLibretaMilitarNombre)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_numero_libreta" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.numeroLibreta)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueSolo">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_distrito_libreta" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.distrito)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--LICENCIA DE CONDUCCION-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_directions_car"
+                            android:text="@string/datos_basicos_licencia"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/licencia_categoria_a" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionANombre)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fechaVencimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionAFechaVencimiento)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/licencia_categoria_b" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionBNombre)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fechaVencimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionBFechaVencimiento)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/licencia_categoria_c" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionCNombre)}"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fechaVencimiento" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.licenciaConduccionCFechaVencimiento)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- OTROS  -->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_contact_mail"
+                            android:text="@string/datos_basicos_otros"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_talla_camisa" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.tallaCamisa)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_talla_pantalon" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.tallaPantalon)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueIzq">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_numero_calzado" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.numeroCalzado)}" />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/bloqueDer">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_lentes" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.usaLentes)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueSolo">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_tipo_sangre" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.tipoSangreNombre}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloque">
+
+                            <LinearLayout
+                                style="@style/bloqueSolo">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_correo_personal" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.correoElectronicoPersonal)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/bloqueFinal">
+
+                            <LinearLayout
+                                style="@style/bloqueSolo">
+
+                                <TextView
+                                    style="@style/InfoBasicaTitulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/datos_basicos_correo_corporativo" />
+                                <TextView
+                                    style="@style/InfoBasicaTexto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{funcionario.campoVacio(funcionario.correoElectronicoCorporativo)}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Edicion-->
+                <LinearLayout
+                    style="@style/bloqueSolo"
+                    android:id="@+id/edicionDatosBasicos"
+                    android:visibility="gone">
+
+                    <!--RESIDENCIA-->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_home"
+                            android:text="@string/datos_basicos_residencia" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_pais_residencia_requerido" />
+
+                            <Spinner
+                                style="@style/campoTexto"
+                                android:id="@+id/sp_pais_residencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/msg_error_pais_residencia"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_departamento_residencia_requerido" />
+
+                            <Spinner
+                                style="@style/campoTexto"
+                                android:id="@+id/sp_departamento_residencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                style="@style/mensajeErrorEdicion"
+                                android:id="@+id/msg_error_departamento_residencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_municipio_residencia_requerido" />
+
+                            <Spinner
+                                style="@style/campoTexto"
+                                android:id="@+id/sp_municipio_residencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/msg_error_municipio_residencia"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_celular_requerido" />
+
+                            <EditText
+                                style="@style/campoCelular"
+                                android:id="@+id/et_celular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:text="@{funcionario.celular}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_celular"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_telefono_fijo" />
+
+                            <EditText
+                                style="@style/campoTelefono"
+                                android:id="@+id/et_telefono_fijo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:text="@{funcionario.telefonoFijo}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_telefono_fijo"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_tipo_vivienda_requerido" />
+
+                            <Spinner
+                                style="@style/campoTexto"
+                                android:id="@+id/sp_vivienda"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/msg_error_tipo_vivienda"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_direccion_requerido" />
+
+                            <EditText
+                                style="@style/campoDireccion"
+                                android:id="@+id/et_direccion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@{funcionario.direccion}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_direccion"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- OTROS  -->
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gris" />
+                        <TextView
+                            style="@style/InfoBasicaTituloSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_contact_mail"
+                            android:text="@string/datos_basicos_otros"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_talla_camisa" />
+
+                            <EditText
+                                android:id="@+id/et_talla_camisa"
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:maxLength="3"
+                                android:text="@{funcionario.tallaCamisa}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_talla_camisa"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_talla_pantalon" />
+
+                            <EditText
+                                android:id="@+id/et_talla_pantalon"
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:text="@{funcionario.tallaPantalon}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_talla_pantalon"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_numero_calzado" />
+
+                            <EditText
+                                android:id="@+id/et_numero_calzado"
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:text="@{funcionario.numeroCalzado}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_numero_calzado"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_lentes_requerido" />
+
+                            <Spinner
+                                style="@style/campoTexto"
+                                android:id="@+id/sp_lentes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/msg_error_lentes"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_tipo_sangre" />
+
+                            <EditText
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:text="@{funcionario.tipoSangreNombre}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_correo_personal" />
+
+                            <EditText
+                                android:id="@+id/et_correo_personal"
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@{funcionario.correoElectronicoPersonal}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_correo_personal"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/itemEdicionTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/datos_basicos_correo_corporativo" />
+
+                            <EditText
+                                style="@style/campoTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="text"
+                                android:text="@{funcionario.correoElectronicoCorporativo}" />
+
+                            <TextView
+                                android:id="@+id/msg_error_correo_corp"
+                                style="@style/mensajeErrorEdicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/contenedorBloques">
+
+                        <Button
+                            style="@style/botonConfirmacion"
+                            android:id="@+id/btnGuardarDatosBasicos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="@string/guardar"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/fab"
+            android:id="@+id/fab_datos_basicos"
+            app:srcCompat="@drawable/ic_edit" />
+    </RelativeLayout>
+</layout>

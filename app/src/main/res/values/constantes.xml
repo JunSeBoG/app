@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nombreapp">NOMINAP</string>
+
+    <string name="apiNomina">http://nompruebas.alcanosesp.com:8081/</string>
+
+    <!--Archivos Mongo-->
+    <string name="descargarArchivosss">http://nompruebas.alcanosesp.com:8081/api/archivos/%1$s/Archivo</string>
+
+
+    <!--Refrescar Token -->
+    <string name="refrescartoken">api/Autenticacion/Refresh</string>
+
+
+    <string name="validarToken">/weatherforecast</string>
+    <string name="eliminarArchivos">weatherforecast</string>
+
+    <string-array name="spinnerLentes">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+</resources>

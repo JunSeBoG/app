@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="familiar"
+            type="com.alcanosesp.appalcanos.db.entity.Familiar" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.datos_personales.datos_basicos.FamiliaresFragment">
+
+        <!--PROGRESS BAR-->
+        <include
+            android:id="@+id/pb_familiares"
+            layout="@layout/progress_bar" />
+
+        <!--LISTA FAMILIARES-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_familiares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ib_familiares_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            style="@style/emptyState"
+            android:id="@+id/ib_empty_familiares"
+            tools:ignore="UseCompoundDrawables"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:src="@drawable/empty_datos_familiares"
+                android:contentDescription="@string/imagenemptystate"/>
+
+            <TextView
+                style="@style/emptyStateTexto"
+                android:text="@string/info_familiar_emptystate"/>
+        </LinearLayout>
+
+        <!--VISUALIZACION-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/contenedorBloques"
+                android:id="@+id/visualizacion_familiar"
+                android:visibility="gone">
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_primerNombre" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.primerNombre}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_segundoNombre" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.campoVacio(familiar.segundoNombre)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_primerApellido" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.primerApellido}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_segundoApellido" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.campoVacio(familiar.segundoApellido)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_sexo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.sexoNombre}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_parentesco" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.parentescoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_dependiente" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.dependiente}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_tipoDocumento" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.tipoDocumentoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_nDocumento" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.numeroDocumento}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_nivelEducativo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.nivelEducativoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_fechaNacimiento" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.fechaNacimiento}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_paisResidencia" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.paisNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_deptoResidencia" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.departamentoNombre}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_mpioResidencia" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.municipioNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_celular" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.celular}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_telefonoFijo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.campoVacio(familiar.telefonoFijo)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_familiar_direccion" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.direccion}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estado_registro" />
+                        <TextView
+                            style="@style/chip"
+                            android:id="@+id/familiar_estado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.estado}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/justificacionFamiliar"
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/justificacion_registro" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{familiar.campoVacio(familiar.justificacion)}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_familiares"
+            style="@style/fab"/>
+
+    </RelativeLayout>
+</layout>

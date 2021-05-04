@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/nav_certificados_desprendibles"
+            android:icon="@drawable/ic_assigment"
+            android:title="@string/menu_certificados_desprendibles"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_consultas"
+            android:icon="@drawable/ic_find_in_page"
+            android:title="@string/menu_consultas" />
+        <item
+            android:id="@+id/nav_datos_personales"
+            android:icon="@drawable/ic_supervisor_account"
+            android:title="@string/menu_datos_personales" />
+        <item
+            android:id="@+id/nav_incapacidades"
+            android:icon="@drawable/ic_healing"
+            android:title="@string/menu_incapacidades" />
+        <item
+            android:id="@+id/nav_solicitudes"
+            android:icon="@drawable/ic_touch_app"
+            android:title="@string/menu_solicitudes" />
+    </group>
+</menu>

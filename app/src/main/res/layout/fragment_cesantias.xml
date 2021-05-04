@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cesantias"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudCesantia" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.solicitudes.cesantias.CesantiasFragment">
+
+        <!--PROGRESS BAR -->
+        <include
+            android:id="@+id/pb_cesantias"
+            layout="@layout/progress_bar"
+            android:visibility="visible" />
+
+        <!--LISTA EXPERIENCIAS-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_cesantias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cesantias"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            android:id="@+id/ll_empty_cesantias"
+            style="@style/emptyState"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:contentDescription="@string/imagenemptystate"
+                android:src="@drawable/empty_anticipo_cesantias" />
+
+            <TextView
+                style="@style/emptyStateTexto"
+                android:text="@string/empty_solicitudCesantias" />
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_cesantias"
+            style="@style/fabEditar" />
+
+
+    </RelativeLayout>
+</layout>

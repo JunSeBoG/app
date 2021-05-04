@@ -1,0 +1,43 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alcanosesp.appalcanos.ui.menulateral.consultas.desprendibles.DesprendiblesFragment">
+
+    <!--PROGRESS BAR-->
+    <include
+        android:id="@+id/pb_desprendibles"
+        layout="@layout/progress_bar" />
+
+    <!--LISTA SOLICITUDES-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_desprendibles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/desprendibles_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!--EMPTY STATE-->
+    <LinearLayout
+        style="@style/emptyState"
+        android:id="@+id/empty_desprendibles"
+        tools:ignore="UseCompoundDrawables"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/emptyStateImg"
+            android:src="@drawable/empty_desprendibles"
+            android:contentDescription="@string/imagenemptystate"/>
+        <TextView
+            style="@style/emptyStateTexto"
+            android:text="Aún no tienes desprendibles de nómina. Si crees que es un error comunícate con Gestión Humana."/>
+    </LinearLayout>
+</RelativeLayout>
+</layout>

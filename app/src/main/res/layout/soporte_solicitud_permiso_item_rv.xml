@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="soportepermiso"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudPermisoSoporte" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:id="@+id/tv_nombre_soporte_permiso"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/icono_accion_solicitud_permiso_soporte"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_bold"
+            android:hint="Tipo soporte"
+            android:text="@{soportepermiso.tipoSoporteNombre}" />
+
+
+        <TextView
+            android:id="@+id/et_comentario_soporte_permiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nombre_soporte_permiso"
+            android:layout_toLeftOf="@id/icono_accion_solicitud_permiso_soporte"
+            android:fontFamily="@font/muli_regular"
+            android:hint=""
+            android:text="@{soportepermiso.comentario}" />
+         <ImageView
+             android:id="@+id/icono_accion_solicitud_permiso_soporte"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentTop="true"
+             android:layout_above="@id/tv_linea_soporte_permiso"
+             android:src="@drawable/ic_save_alt"
+             android:tint="@color/gris"/>
+
+        <TextView
+            android:id="@+id/tv_linea_soporte_permiso"
+            android:layout_width="match_parent"
+            android:layout_below="@id/et_comentario_soporte_permiso"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/gris_claro_linea" />
+    </RelativeLayout>
+
+
+</layout>

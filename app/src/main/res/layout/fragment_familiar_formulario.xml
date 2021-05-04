@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="familiar"
+            type="com.alcanosesp.appalcanos.db.entity.Familiar" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.FamiliarFormularioFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout
+                android:id="@+id/formulario_familiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_primerNombre_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_primerNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:text="@{familiar.primerNombre}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_primerNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_segundoNombre" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_segundoNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:text="@{familiar.segundoNombre}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_segundoNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_primerApellido_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_primerApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:text="@{familiar.primerApellido}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_primerApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_segundoApellido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_segundoApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@{familiar.segundoApellido}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_segundoApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_sexo_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_sexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_sexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_parentesco_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_parentesco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_parentesco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_dependiente_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_dependiente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_dependiente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_tipoDocumento_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_tipoDocumento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_tipoDocumento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_nDocumento_requerido" />
+
+                    <EditText
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_nDocumento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="15"
+                        android:text="@{familiar.numeroDocumento}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_nDocumento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_nivelEducativo_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/et_familiar_nivelEducativo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_nivelEducativo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_fechaNacimiento_requerido" />
+
+                    <EditText
+                        style="@style/campoFecha"
+                        android:id="@+id/et_familiar_fechaNacimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{familiar.fechaNacimiento}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_fechaNacimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_paisResidencia_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_pais"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_paisResidencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_deptoResidencia_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_depto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_deptoResidencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_mpioResidencia_requerido" />
+
+                    <Spinner
+                        style="@style/campoTexto"
+                        android:id="@+id/sp_familiar_mpio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_mpioResidencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_celular_requerido" />
+
+                    <EditText
+                        style="@style/campoCelular"
+                        android:id="@+id/et_familiar_celular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text="@{familiar.celular}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_celular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_telefonoFijo" />
+
+                    <EditText
+                        style="@style/campoTelefono"
+                        android:id="@+id/et_familiar_telefonoFijo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:text="@{familiar.telefonoFijo}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_telefonoFijo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_familiar_direccion_requerido" />
+
+                    <EditText
+                        style="@style/campoDireccion"
+                        android:id="@+id/et_familiar_direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@{familiar.direccion}"/>
+
+                    <TextView
+                        style="@style/mensajeErrorEdicion"
+                        android:id="@+id/msg_error_familiar_direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    style="@style/botonConfirmacion"
+                    android:id="@+id/btn_guardar_familiar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

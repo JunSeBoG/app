@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/azul_abeto</color>
+    <color name="colorPrimaryDark">@color/azul_marino</color>
+    <color name="colorAccent">@color/blanco</color>
+
+    <!--Colores principales-->
+    <color name="blanco">#FFF</color>
+    <color name="azul_raf">#1F3A4D</color>
+    <color name="azul_abeto">#0C2A3E</color>
+    <color name="azul_marino">#151F36</color>
+
+    <!--OnBoard-->
+    <color name="azul_m">#09B295</color>
+    <color name="azul_cobalto">#4164C9</color>
+    <color name="rosa_ponche">#FF6666</color>
+
+    <!--Botón-->
+    <color name="verde_pera">#6E992E</color>
+    <color name="gris">#6D6C6C</color>
+
+    <color name="gris_claro">#E0E0E0</color>
+    <color name="rojo">#F44336</color>
+
+    <!--Cards-->
+    <color name="magenta">#B72974</color>
+    <color name="fuego">#FFA124</color>
+    <color name="azul_verdoso">#066F77</color>
+    <color name="ultravioleta">#6232CC</color>
+    <color name="azul_rey">#004693</color>
+    <color name="salmon">#EE564C</color>
+    <color name="castano">#602411</color>
+    <color name="naranja">#EF6100</color>
+    <color name="mandarina">#FF7D43</color>
+    <color name="purpura">#8822A0</color>
+    <color name="turquesa">#3DBDD3</color>
+    <color name="nude">#CE7459</color>
+    <color name="carmesi">#9B193E</color>
+    <color name="verde_menta">#3FD195</color>
+    <color name="coral">#FF7D7D</color>
+    <color name="verde_lima">#9ABF00</color>
+    <color name="azul_claro">#213a4a</color>
+
+    <!--Notificacion -->
+    <color name="gris_oscuro">#424141</color>
+    <color name="gris_boton_letra">#383838</color>
+    <color name="gris_claro_boton_fondo">#DCDADA</color>
+    <color name="gris_claro_linea">#81828c</color>
+    
+    <!--Incapacidades-->
+    <color name="azul_cielo">#007CC0</color>
+
+    <color name="rosa_misdatos">#ff666e</color>
+    <color name="morado_consulta">#4255c6</color>
+    <color name="azulito">#00C1C1</color>
+    <color name="verde_incapacidades">#00bc98</color>
+    <color name="amarillo_solicitudes">#ffaa2e</color>
+
+    <color name="naranja_claro">#f7734b</color>
+    <color name="azul_claro_verdoso">#00C1C1</color>
+    <color name="gris_grafica">#FFDCDADA</color>
+
+    <color name="barra1">#8080FF</color>
+    <color name="barra2">#F7734B</color>
+    <color name="barra3">#FFA73E</color>
+    <color name="barra4">#6E992E</color>
+    <color name="barra5">#00C1C1</color>
+
+</resources>

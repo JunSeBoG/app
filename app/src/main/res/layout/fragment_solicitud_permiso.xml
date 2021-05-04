@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="permiso"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudPermiso" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.incapacidades.IncapacidadesFragment">
+
+        <!--PROGRESS BAR -->
+        <include
+            android:id="@+id/pb_permiso"
+            layout="@layout/progress_bar"
+            android:visibility="gone"/>
+
+        <!--LISTA EXPERIENCIAS-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_permiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            android:id="@+id/ll_empty_permiso"
+            style="@style/emptyState"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:contentDescription="@string/imagenemptystate"
+                android:src="@drawable/empty_permisos" />
+
+            <TextView style="@style/emptyStateTexto"
+                android:text="@string/empty_permiso"/>
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_permiso"
+            style="@style/fabEditar" />
+
+
+    </RelativeLayout>
+</layout>

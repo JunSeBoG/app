@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vacaciones"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudVacaciones" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.vacaciones.VacacionesFormularioFragment">
+
+        <include
+            android:id="@+id/pb_vacaciones_forulario"
+            layout="@layout/progress_bar"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/sv_vacaciones_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/formulario_solicitud_permiso"
+                style="@style/bloqueSolo">
+
+                <!--Periodo Disfrute-->
+                <LinearLayout style="@style/bloqueSolo">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris" />
+
+                    <TextView
+                        style="@style/InfoBasicaTituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_today"
+                        android:drawableTint="@color/gris"
+                        android:text="@string/periodo" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/contenedorBloques">
+
+                    <LinearLayout style="@style/bloque">
+
+                        <LinearLayout style="@style/bloqueIzq">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/inicio_de_causacion" />
+
+                            <TextView
+                                style="@style/InfoBasicaTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='@{vacaciones.inicioCausacion}' />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/bloqueDer">
+
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fin_de_causacion" />
+
+                            <TextView
+                                style="@style/InfoBasicaTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='@{ vacaciones.finCausacion}' />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/bloque">
+
+                        <LinearLayout style="@style/bloqueIzq">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dias_de_ley" />
+
+                            <TextView
+                                style="@style/InfoBasicaTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{ vacaciones.diasTrabajados}" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/bloqueDer">
+
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dias_disponibles" />
+
+                            <TextView
+                                style="@style/InfoBasicaTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='@{vacaciones.diasDisponibles}' />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/bloque">
+
+                        <LinearLayout style="@style/bloqueIzq">
+
+                            <TextView
+                                style="@style/InfoBasicaTitulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tipo_de_periodo" />
+
+                            <TextView
+                                style="@style/InfoBasicaTexto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{ vacaciones.tipoPeriodo}" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Periodo Disfrute-->
+                <LinearLayout style="@style/bloqueSolo">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gris" />
+
+                    <TextView
+                        style="@style/InfoBasicaTituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_beach_access"
+                        android:drawableTint="@color/gris"
+                        android:text="@string/periodo_a_disfrutar" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/contenedorBloques">
+
+                    <LinearLayout
+                        style="@style/itemEdicionTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fecha_de_disfrute_requerido" />
+
+                        <EditText
+                            android:id="@+id/et_fecha_disfrute_vacaciones"
+                            style="@style/campoFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{vacaciones.fechaInicioDisfrute}" />
+
+                        <TextView
+                            android:id="@+id/msg_error_fecha_disfrute_vacaciones"
+                            style="@style/mensajeErrorEdicion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/itemEdicionTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dias_en_disfrute_requerido" />
+
+                        <EditText
+                            android:id="@+id/et_dias_disfrute_vacaciones"
+                            style="@style/campoTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:inputType="number"
+                            android:text="@{vacaciones.diasDisfrute}" />
+
+                        <TextView
+                            android:id="@+id/msg_error_dias_disfrute_vacaciones"
+                            style="@style/mensajeErrorEdicion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/itemEdicionTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dias_en_dinero_requerido" />
+
+                        <EditText
+                            android:id="@+id/et_dias_dinero_vacaciones"
+                            style="@style/campoTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:inputType="number"
+                            android:text="@{vacaciones.diasDinero}" />
+
+                        <TextView
+                            android:id="@+id/msg_error_dias_dinero_vacaciones"
+                            style="@style/mensajeErrorEdicion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/itemEdicionTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/observaciones" />
+
+                        <EditText
+                            android:id="@+id/et_observacion_vacaciones"
+                            style="@style/campoTextoArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@{vacaciones.observacion}" />
+
+                        <TextView
+                            android:id="@+id/msg_error_observacion_vacaciones"
+                            style="@style/mensajeErrorEdicion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_guardar_vacaciones"
+                        style="@style/botonConfirmacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guardar" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

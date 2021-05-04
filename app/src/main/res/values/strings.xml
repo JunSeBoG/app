@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">GHestic</string>
+
+    <!--SPLASH-->
+    <string name="logo_de_alcanos">Logo de alcanos</string>
+    <string name="imagen_root_onboard">Imagen root de onBoard</string>
+
+
+    <!--ONBOARDING-->
+    <string name="onboard_tit_datos_personales">Datos personales</string>
+    <string name="onboard_des_datos_personales">
+        Podrás mantener actualizada la información personal de tu núcleo familiar al igual que tus datos de contacto.
+    </string>
+    <string name="onboard_tit_consultas">Consultas</string>
+    <string name="onboard_des_consultas">
+        Podrás consultar de forma inmediata certificados laborales, desprendibles de pago, cesantías y vacaciones.
+    </string>
+    <string name="onboard_tit_solicitudes">Solicitudes</string>
+    <string name="onboard_des_solicitudes">
+        Podrás realizar solicitudes de permisos, cesantías, vacaciones y auxilios de tipo educativo, óptico o de calamidad.
+    </string>
+    <string name="onboard_btn_comienza_ahora">¡ Comienza ahora !</string>
+
+
+    <!--LOGIN-->
+    <string name="login_titulo">¡Hola!</string>
+    <string name="login_descripcion">Bienvenido a tu aplicación de autoservicio.</string>
+    <string name="login_txt_hint_usuario">Usuario *</string>
+    <string name="login_txt_hint_contrasena">Contraseña *</string>
+    <string name="login_btn_Acceder">Ingresa ahora</string>
+    <string name="mensaje_sesion_cerrada">Has cerrado la sesión de forma correcta.</string>
+    <string name="mensaje_error_iniciar_sesion">El usuario o contraseña que has ingresado no son correctos, por favor intentalo de nuevo.</string>
+    <string name="mensaje_no_tiene_permisos_ingreso">El usuario que has ingresado no tiene permiso para acceder.</string>
+    <string name="mensaje_no_creado_como_empleado">El usuario no está creado como empleado.</string>
+    <string name="mensaje_eror_404">Error %1$s: No es posible conectarse con el servidor.</string>
+
+
+    <!--MENU LATERAL-->
+    <string name="title_activity_menu_lateral">MenuLateralActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_certificados_desprendibles">Certificados y desprendibles</string>
+    <string name="menu_consultas">Consultas</string>
+    <string name="menu_datos_personales">Datos personales</string>
+    <string name="menu_incapacidades">Incapacidades</string>
+    <string name="menu_solicitudes">Solicitudes</string>
+    <string name="dashboard_txt">Anímate y explora el menú lateral para que conozcas las funciones de la aplicación.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--CONSULTAS-->
+    <string name="consulta_pila_titulo">Último pago PILA</string>
+    <string name="consulta_pila_desc">Accede al sitio web de nuestro operador de PILA para que consultes el último pago.</string>
+    <string name="URLPagoPila">https://www.enlace-apb.com/interssi/certificadoPago.plus</string>
+
+    <!--CONSULTAS-->
+    <string name="certificado_titulo">Certificado laboral</string>
+    <string name="certificado_descripcion">Genera un pdf del certificado laboral asociado a tu contrato laboral actual.</string>
+
+    <!--Cambiar Imagen Perfir-->
+    <string name="seleccionar_documento">Seleccionar documento</string>
+    <string name="seleccionar_foto">Seleccionar foto</string>
+    <string name="tomar_foto">Tomar foto</string>
+    <string name="eliminar_foto">Eliminar foto</string>
+    <string name="correo_electronico_personal">Correo electrónico personal</string>
+    <string name="numero_identificacion">Número de identificación</string>
+    <string name="nombre">Nombre</string>
+    <string name="imagenemptystate">ImagenEmptyState</string>
+
+    <!--CERTIFICADO Y DESPRENDIBLES-->
+    <string name="titulo_certificado_laboral">¿Qué tipo de certificado laboral necesitas?</string>
+
+    <!--NOTIFICACIONES -->
+    <string name="titulo_encabezado_notificaciones">Este mensaje es para ti.</string>
+    <string name="ghestic_mayuscula">GHESTIC</string>
+    <string name="tipo_de_incapacidad">Tipo de incapacidad</string>
+    <string name="tipo_de_incapacidad_requerido">Tipo de incapacidad *</string>
+    <string name="codigo_del_diagn_stico">Código del diagnóstico</string>
+    <string name="codigo_del_diagn_stico_requerido">Código del diagnóstico *</string>
+    <string name="fecha_de_inicio">Fecha de inicio</string>
+    <string name="fecha_de_inicio_requerido">Fecha de inicio *</string>
+    <string name="fecha_fin">Fecha fin</string>
+    <string name="fecha_fin_requerido">Fecha fin *</string>
+    <string name="prorroga_de">Prórroga de…</string>
+    <string name="prorroga_de_requerido">Prórroga de… *</string>
+    <string name="numero_de_incapacidad">Número de incapacidad</string>
+    <string name="numero_de_incapacidad_requerido">Número de incapacidad *</string>
+    <string name="estado">Estado</string>
+    <string name="soporte_requerido">Soporte *</string>
+    <string name="soporte_de_la_incapacidad">Soporte de la incapacidad.</string>
+    <string name="nuevo_mensaje">Nuevo mensaje</string>
+    <string name="pregunta_cancelar_incapacidad"> ¿Estas seguro de anular la incapacidad?</string>
+    <string name="empty_incapacidades">Aún no has ingresado información. Para registrar una incapacidad, pulsa el botón (+).</string>
+
+    <!--PERMISO-->
+    <string name="clase_permiso">Clase de permiso</string>
+    <string name="clase_permiso_requerido">Clase de permiso *</string>
+    <string name="tipo_permiso">Tipo de permiso</string>
+    <string name="tipo_permiso_requerido">Tipo de permiso *</string>
+    <string name="hora_de_salida">Hora de salida</string>
+    <string name="hora_de_llegada">Hora de llegada</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="observaciones_requerido">Observaciones *</string>
+    <string name="pregunta_anular_solicitud">¿Estás seguro de cancelar la solicitud?</string>
+    <string name="cargar_soporte">Cargar soporte</string>
+    <string name="empty_permiso">Aún no has ingresado información. Para solicitar un permiso, pulsa el botón (+).</string>
+    <string name="tipo_soporte_requerido">Tipo soporte *</string>
+    <string name="debe_seleccionar_un_soporte">Debes seleccionar un soporte.</string>
+    <string name="comentario">Comentario</string>
+    <string name="desea_cargar_otro_soporte">¿Deseas cargar otro soporte?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="respuesta_a_la_solicitud">Respuesta a la solicitud</string>
+    <string name="soporte">Soporte</string>
+    <string name="pregunta_eliminar_soporte">¿Estás seguro de eliminar el soporte: %1$s?</string>
+    <string name="actualizacion_de_datos">Actualización de datos</string>
+
+
+    <string name="solicitudes_de_permisos">Solicitudes de permisos</string>
+    <string name="solicitudes_de_beneficios">Solicitudes de beneficios</string>
+
+    <!--Solicitud cesantias -->
+    <string name="base_calculo_de_cesantias">Base cálculo de cesantías</string>
+    <string name="base_calculo_de_cesantias_requerido">Base cálculo de cesantías *</string>
+    <string name="fecha_solicitud">Fecha solicitud</string>
+    <string name="motivo_solicitud">Motivo de solicitud</string>
+    <string name="motivo_solicitud_requerido">Motivo de solicitud *</string>
+    <string name="valor_solicitado">Valor solicitado</string>
+    <string name="valor_solicitado_requerido">Valor solicitado *</string>
+    <string name="dias_causados">Días causados</string>
+    <string name="valor_acumulado">Valor acumulado</string>
+    <string name="anticipos_solicitados">Anticipos solicitados</string>
+    <string name="intereses_causados">Intereses causados</string>
+    <string name="empty_solicitudCesantias">Aún no has ingresado información. Para solicitar un anticipo de cesantías, pulsa el botón (+).</string>
+    <string name="soporte_de_anticipo">Soporte de anticipo</string>
+    <string name="soporte_de_cesantias">Soporte de cesantías</string>
+
+    <!--Error archivos o imagenes -->
+    <string name="error_tamanio_archivo">El archivo tiene un tamaño mayor al máximo permitido.</string>
+
+    <!--Solicitud Vacaciones-->
+    <string name="inicio_de_causacion">Inicio de causación</string>
+    <string name="fin_de_causacion">Fin de causación</string>
+    <string name="dias_de_ley">Días de ley</string>
+    <string name="dias_disponibles">Días disponibles</string>
+    <string name="tipo_de_periodo">Tipo de período</string>
+    <string name="tipo_de_periodo_requerido">Tipo de período *</string>
+    <string name="fecha_de_disfrute">Fecha de disfrute</string>
+    <string name="fecha_de_disfrute_requerido">Fecha de disfrute *</string>
+    <string name="dias_en_disfrute">Días en disfrute</string>
+    <string name="dias_en_disfrute_requerido">Días en disfrute *</string>
+    <string name="dias_en_dinero">Días en dinero</string>
+    <string name="dias_en_dinero_requerido">Días en dinero *</string>
+    <string name="periodo_a_disfrutar">Período a disfrutar</string>
+    <string name="periodo">Período</string>
+    <string name="empty_solicitud_vacaciones">Aún no has ingresado información. Para solicitar vacaciones, pulsa el botón (+).</string>
+    <string name="empty_solicitud_vacaciones_interrupcion">No se han registrado interrupciones para esta solicitud de vacaciones.</string>
+
+</resources>

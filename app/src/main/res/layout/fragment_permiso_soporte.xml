@@ -1,0 +1,176 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="soportepermiso"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudPermisoSoporte" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.incapacidades.IncapacidadFormularioFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/formulario_solicitud_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_soporte_requerido" />
+
+                    <Spinner
+                        android:id="@+id/s_permiso_soporte_tipo"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/msg_error_soporte_permiso_tipo_soporte"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/observaciones" />
+
+                    <EditText
+                        android:id="@+id/ed_soporte_permiso_comentario"
+                        style="@style/campoTextoArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{soportepermiso.comentario}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_soporte_permiso_comentario"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/llBotonesCrearAdjunto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout android:id="@+id/ll_confirma_carga_soporte"
+                        style="@style/bloqueSolo"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_confirma_carga_soporte_permiso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:drawableRight="@drawable/ic_check_circle"
+                            android:drawablePadding="20dp"
+                            android:fontFamily="@font/muli_light"
+                            android:text="Soporte cargado correctamente."
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/ll_seleccionar_documento_soporte_permiso"
+                        style="@style/llDialogoAgjunto"
+                        android:layout_below="@id/ll_confirma_carga_soporte">
+
+                        <EditText
+                            android:id="@+id/et_adjunto_soporte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivSeleccionarDocumentoDialogo"
+                            style="@style/imgsoporteAdjunto"
+                            android:src="@drawable/ic_insert_drive_file" />
+
+                        <TextView
+                            android:id="@+id/tvivSeleccionarDocumentoDialogo"
+                            style="@style/textSoportePermisos"
+                            android:text="@string/seleccionar_documento" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/ll_seleccionar_foto_soporte_permiso"
+                        style="@style/llDialogoAgjunto"
+                        android:layout_below="@+id/ll_seleccionar_documento_soporte_permiso">
+
+                        <ImageView
+                            android:id="@+id/ivSeleccionarFotoDialogo"
+                            style="@style/imgsoporteAdjunto"
+                            android:src="@drawable/ic_add_photo_alternate" />
+
+                        <TextView
+                            android:id="@+id/tvSeleccionarFotoDialogo"
+                            style="@style/textSoportePermisos"
+                            android:text="@string/seleccionar_foto" />
+
+                    </LinearLayout>
+
+                    <LinearLayout  android:id="@+id/ll_tomar_foto_soporte_permiso"
+                        style="@style/llDialogoAgjunto"
+                        android:layout_below="@+id/ll_seleccionar_foto_soporte_permiso">
+
+                        <ImageView
+                            android:id="@+id/ivTomarFotoDiaolo"
+                            style="@style/imgsoporteAdjunto"
+                            android:src="@drawable/ic_add_a_photo"/>
+
+                        <TextView
+                            android:id="@+id/tvivTomarFotoDiaolo"
+                            style="@style/textSoportePermisos"
+                            android:text="@string/tomar_foto" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_guardar_soporte_permiso"
+                        style="@style/botonConfirmacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/guardar" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</layout>

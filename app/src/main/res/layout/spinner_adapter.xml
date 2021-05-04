@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nombre_tipo_vivienda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:ellipsize="marquee"
+    android:fontFamily="@font/muli_regular"
+    android:singleLine="true"
+    android:textAlignment="textStart"
+    android:textColor="@color/gris"
+    android:textSize="15sp"
+    android:drawableEnd="@drawable/ic_arrow_drop_down"
+    android:drawableTint="@color/gris">
+</TextView>

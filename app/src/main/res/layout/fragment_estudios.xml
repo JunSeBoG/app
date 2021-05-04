@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="estudio"
+            type="com.alcanosesp.appalcanos.db.entity.Estudio" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.datos_personales.datos_basicos.EstudiosFragment">
+
+        <!--PROGRESS BAR-->
+        <include
+            android:id="@+id/pb_estudios"
+            layout="@layout/progress_bar" />
+
+        <!--LISTA ESTUDIOS-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_estudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ib_estudios_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            style="@style/emptyState"
+            android:id="@+id/ib_empty_estudios"
+            tools:ignore="UseCompoundDrawables"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:src="@drawable/empty_estudios"
+                android:contentDescription="@string/imagenemptystate"/>
+
+            <TextView
+                style="@style/emptyStateTexto"
+                android:text="@string/info_estudios_emptystate" />
+        </LinearLayout>
+
+        <!--VISUALIZACION-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/contenedorBloques"
+                android:id="@+id/visualizacion_estudio"
+                android:visibility="gone">
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_niveleducativo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.nivelEducativoNombre}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_inseducativa" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.institucion}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_estado" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.estadoEstudio}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_pais" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.paisNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_fechainicio" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.fechaInicio}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_fechafin" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.campoVacio(estudio.fechaFin)}" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_profesion" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.campoVacio(estudio.profesionNombre)}" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_ntarjetaprof" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.campoVacio(estudio.tarjetaProfesional)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_titulo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.titulo}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_estudio_nota" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.campoVacio(estudio.observacion)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estado_registro" />
+                        <TextView
+                            style="@style/chip"
+                            android:id="@+id/estudio_estado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.estado}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/justificacion_estudio"
+                    style="@style/bloque"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/justificacion_registro" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{estudio.campoVacio(estudio.justificacion)}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/fab"
+            android:id="@+id/fab_estudio" />
+    </RelativeLayout>
+</layout>

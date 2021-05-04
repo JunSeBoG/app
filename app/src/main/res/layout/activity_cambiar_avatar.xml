@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6d6c6c"
+    tools:context=".ui.menulateral.perfil.CambiarAvatarActivity">
+    <!--PROGRESS BAR-->
+    <include
+        android:id="@+id/pbCambairAvatar"
+        layout="@layout/progress_bar"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llCambiarAbatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cambiarAvatarFuncionario"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="20dp"
+            android:maxWidth="200dp"
+            android:maxHeight="200dp"
+            android:src="@drawable/empty_personaje"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="0.5dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="125dp"
+            android:src="@drawable/ic_photo_camera"
+            android:tint="@color/gris"
+            app:fabSize="mini" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="50dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llSeleccionarFotoPerfil"
+            style="@style/llDialogoAgjunto"
+            android:onClick="clickSeleccionarFoto">
+
+            <ImageView
+                android:id="@+id/ivSeleccionarFotoPerfil"
+                style="@style/imgDialogoAdjunto"
+                android:src="@drawable/ic_add_photo_alternate" />
+
+            <TextView
+                android:id="@+id/tvSeleccionarFotoDialogo"
+                style="@style/textDialogoAdjunto"
+                android:fontFamily="@font/muli_regular"
+                android:textSize="20sp"
+                android:textColor="@color/blanco"
+                android:text="@string/seleccionar_foto"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTomarFotoPerfil"
+            style="@style/llDialogoAgjunto"
+            android:onClick="clickTomarFoto">
+
+            <ImageView
+                android:id="@+id/ivTomarFotoDiaolo"
+                style="@style/imgDialogoAdjunto"
+                android:src="@drawable/ic_add_a_photo" />
+
+            <TextView
+                android:id="@+id/tvivTomarFotoDiaolo"
+                style="@style/textDialogoAdjunto"
+                android:fontFamily="@font/muli_regular"
+                android:textSize="20sp"
+                android:textColor="@color/blanco"
+                android:text="@string/tomar_foto"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEliminarFotoPerfil"
+            style="@style/llDialogoAgjunto"
+            android:layout_marginBottom="0dp"
+            android:onClick="clickEliminarFoto">
+
+            <ImageView
+                android:id="@+id/ivEliminarFotoPerfil"
+                style="@style/imgDialogoAdjunto"
+                android:src="@drawable/ic_delete_outline" />
+
+            <TextView
+                android:id="@+id/tviEliminarFotoPerfil"
+                style="@style/textDialogoAdjunto"
+                android:fontFamily="@font/muli_regular"
+                android:textSize="20sp"
+                android:textColor="@color/blanco"
+                android:text="@string/eliminar_foto"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

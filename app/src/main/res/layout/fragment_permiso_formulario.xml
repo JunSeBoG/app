@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="solicitudPermiso"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudPermiso" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.incapacidades.IncapacidadFormularioFragment">
+
+        <include
+            android:id="@+id/pb_permisos_forulario"
+            layout="@layout/progress_bar"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:id="@+id/sv_formulario_permiso"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="invisible">
+
+
+            <LinearLayout
+                android:id="@+id/formulario_solicitud_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clase_permiso_requerido" />
+
+                    <Spinner
+                        android:id="@+id/s_solicitud_permiso_clase_permiso"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_clase_permiso"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_permiso_requerido" />
+
+                    <Spinner
+                        android:id="@+id/s_solicitud_permiso_tipo_permiso"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_tipo_permiso"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_fechainicio_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_solicitud_permiso_fecha_inicio"
+                        style="@style/campoFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{solicitudPermiso.fechaInicio}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_fecha_inicio"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_solicitu_permiso_fecha_fin"
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fecha_fin_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_solicitud_permiso_fecha_fin"
+                        style="@style/campoFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{solicitudPermiso.fechaFin}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_fecha_fin"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_solicitud_permiso_hora_salida"
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hora_de_salida" />
+
+                    <EditText
+                        android:id="@+id/et_solicitud_permiso_hora_salida"
+                        style="@style/campoHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{solicitudPermiso.horaSalida}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_hora_salida"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_solicitud_permiso_hora_llegada"
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hora_de_llegada" />
+
+                    <EditText
+                        android:id="@+id/et_solicitud_permiso_hora_llegada"
+                        style="@style/campoHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{solicitudPermiso.horaLlegada}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_hora_llegada"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_soporte_permiso"
+                    style="@style/bloqueSolo">
+
+
+                    <TextView
+                        android:id="@+id/tvSoportePermiso"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_attach_file"
+
+                        android:drawableTint="@color/azul_cielo"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="@string/cargar_soporte"
+                        android:textColor="@color/azul_cielo" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_soportePermiso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/observaciones" />
+
+                    <EditText
+                        android:id="@+id/ed_solicitud_permiso_observacion"
+                        style="@style/campoTextoArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{solicitudPermiso.observaciones}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_solicitud_permiso_observaciones"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/btn_guardar_solicitud_permiso"
+                    style="@style/botonConfirmacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

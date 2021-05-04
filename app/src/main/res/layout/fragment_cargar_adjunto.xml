@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/azul_marino"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <!--PROGRESS BAR-->
+    <LinearLayout
+        android:id="@+id/llBotonesCrearAdjunto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/pb_cargar_adjunto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:indeterminateTint="@color/gris_claro"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/ll_item_cargar_adjunto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llSeleccionarDocumentoDialogo"
+                style="@style/llDialogoAgjunto">
+
+                <ImageView
+                    android:id="@+id/ivSeleccionarDocumentoDialogo"
+                    style="@style/imgDialogoAdjunto"
+                    android:src="@drawable/ic_insert_drive_file" />
+
+                <TextView
+                    android:id="@+id/tvivSeleccionarDocumentoDialogo"
+                    style="@style/textDialogoAdjunto"
+                    android:text="Seleccione documento" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSeleccionarFotoDialogo"
+                style="@style/llDialogoAgjunto">
+
+                <ImageView
+                    android:id="@+id/ivSeleccionarFotoDialogo"
+                    style="@style/imgDialogoAdjunto"
+                    android:src="@drawable/ic_add_photo_alternate" />
+
+                <TextView
+                    android:id="@+id/tvSeleccionarFotoDialogo"
+                    style="@style/textDialogoAdjunto"
+                    android:text="Seleccione foto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTomarFotoDialogo"
+                style="@style/llDialogoAgjunto">
+
+                <ImageView
+                    android:id="@+id/ivTomarFotoDiaolo"
+                    style="@style/imgDialogoAdjunto"
+                    android:src="@drawable/ic_add_a_photo" />
+
+                <TextView
+                    android:id="@+id/tvivTomarFotoDiaolo"
+                    style="@style/textDialogoAdjunto"
+                    android:text="Tomar foto" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

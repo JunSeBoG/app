@@ -1,0 +1,371 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:fontFamily">@font/muli_regular</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="OnBoardTitle" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/muli_light</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="tamanoNormal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tamanoExacto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="textoRegularBlanco">
+        <item name="android:fontFamily">@font/muli_regular</item>
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+    <style name="MuliFont" parent="AppTheme">
+        <item name="android:fontFamily">@font/muli_regular</item>
+    </style>
+
+    <style name="tab_text" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/muli_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="boton" parent="textoRegularBlanco">
+        <item name="android:background">@drawable/onboard_tab_bg</item>
+    </style>
+
+    <style name="botonVerde" parent="textoRegularBlanco">
+        <item name="android:background">@drawable/btn_verde_bg</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="botonConfirmacion" parent="textoRegularBlanco">
+        <item name="android:background">@drawable/btn_confirmaciones_bg</item>
+        <item name="android:textColor">@drawable/texto_habilitado_deshabilitado</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--INFORMACION BASICA-->
+    <style name="InfoBasicaTituloSeccion">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:fontFamily">@font/muli_light</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableTint">@color/gris</item>
+        <item name="android:textColor">@color/gris</item>
+    </style>
+
+    <style name="InfoBasicaTitulo">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="InfoBasicaTexto">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/muli_regular</item>
+        <item name="android:textColor">@color/gris</item>
+    </style>
+
+    <style name="itemEdicionTexto">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="campoTexto" parent="InfoBasicaTexto">
+        <item name="android:background">@drawable/campo_texto_bg</item>
+        <item name="drawableTint">@drawable/texto_color_gris</item>
+        <item name="android:height">45dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="campoTextoArea" parent="InfoBasicaTexto">
+        <item name="android:background">@drawable/campo_texto_bg</item>
+        <item name="android:gravity">top</item>
+        <item name="android:height">100dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="mensajeErrorEdicion">
+        <item name="android:fontFamily">@font/muli_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:textColor">@color/rojo</item>
+        <item name="android:textAlignment">textStart</item>
+        <!--<item name="android:visibility">gone</item>-->
+    </style>
+
+    <style name="hint" parent="TextAppearance.Design.Hint">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textColor">@color/verde_pera</item>
+    </style>
+
+    <style name="chip" parent="textoRegularBlanco">
+        <item name="android:background">@drawable/chip</item>
+    </style>
+
+    <style name="item_listado" parent="textoRegularBlanco">
+        <item name="android:background">@drawable/datos_basicos_item_rv_bg</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:width">60dp</item>
+        <item name="android:height">60dp</item>
+    </style>
+
+    <style name="ErrorTextStyle" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">7sp</item>
+    </style>
+
+    <style name="datePickerStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textSize">20sp</item>
+        <item name="colorPrimary">@color/blanco</item>
+        <item name="colorAccent">@color/azul_marino</item>
+        <item name="colorPrimaryDark">@color/azul_abeto</item>
+        <item name="android:fontFamily">@font/muli_light</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/btnDatePicker</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/btnDatePicker</item>
+    </style>
+
+    <style name="btnDatePicker">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/muli_regular</item>
+    </style>
+
+    <style name="fab" parent="tamanoExacto">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:backgroundTint">@color/verde_pera</item>
+        <item name="android:tint">@color/blanco</item>
+    </style>
+
+    <style name="campoIcono" parent="campoTexto">
+        <item name="android:drawableTint">@color/gris</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="campoFecha" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_today</item>
+        <item name="android:hint">año - mes - día</item>
+        <item name="android:focusable">false</item>
+        <item name="android:editable">true</item>
+    </style>
+
+    <style name="campoDireccion" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_house</item>
+    </style>
+
+    <style name="campoMoneda" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_money</item>
+    </style>
+
+    <style name="campoTelefono" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_call</item>
+    </style>
+
+    <style name="campoCelular" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_phone</item>
+    </style>
+
+    <style name="contenedorBloques" parent="tamanoNormal">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="bloqueFinal" parent="tamanoNormal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="bloque" parent="tamanoNormal">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">25dp</item>
+    </style>
+
+    <style name="bloqueIzq">
+        <item name="android:layout_width">155dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginEnd">15dp</item>
+    </style>
+
+    <style name="bloqueDer" parent="tamanoNormal">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="bloqueSolo" parent="tamanoNormal">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="emptyState" parent="tamanoNormal">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="emptyStateTexto" parent="tamanoNormal">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/muli_regular</item>
+    </style>
+
+    <style name="emptyStateImg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+    </style>
+
+    <style name="imgDialogoAdjunto">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:backgroundTint">@color/blanco</item>
+        <item name="android:background">@drawable/datos_basicos_item_rv_bg</item>
+    </style>
+
+    <style name="textDialogoAdjunto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="fontFamily">@font/muli_regular</item>
+    </style>
+
+    <style name="llDialogoAgjunto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="fabEditar" parent="tamanoExacto">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:backgroundTint">@color/verde_pera</item>
+        <item name="android:tint">@color/blanco</item>
+    </style>
+    <style name="fabCancelar" parent="tamanoExacto">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_above">@id/fab_aprobar</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:backgroundTint">@color/salmon</item>
+        <item name="android:tint">@color/blanco</item>
+    </style>
+    <style name="campoHora" parent="campoIcono">
+        <item name="android:drawableStart">@drawable/ic_alarm</item>
+        <item name="android:hint">hora : minuto</item>
+        <item name="android:focusable">false</item>
+        <item name="android:editable">true</item>
+    </style>
+    <style name="textSoportePermisos">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="fontFamily">@font/muli_bold</item>
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="imgsoporteAdjunto">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:tint">@color/blanco</item>
+        <item name="android:backgroundTint">@color/azul_abeto</item>
+        <item name="android:background">@drawable/datos_basicos_item_rv_bg</item>
+    </style>
+    <style name="llbotonesInicio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    <style name="botonesInicio">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/datos_basicos_item_rv_bg</item>
+    </style>
+    <style name="texto_botones_Inicio">
+        <item name="fontFamily">@font/muli_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="graficasInicio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:background">@drawable/campo_texto_bg</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="tituloGraficas">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="fontFamily">@font/muli_regular</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+    <style name="llGraficasInicio">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="currencyTextView" parent="InfoBasicaTexto">
+        <item name="android:enabled">false</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="labelSoporteFormulario" parent="InfoBasicaTexto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:text">@string/soporte_de_la_incapacidad</item>
+        <item name="android:drawableEnd">@drawable/ic_attach_file</item>
+        <item name="android:drawableTint">@color/gris_claro_linea</item>
+        <item name="android:drawablePadding">55dp</item>
+    </style>
+
+
+</resources>

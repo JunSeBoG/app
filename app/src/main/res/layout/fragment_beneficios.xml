@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.solicitudes.beneficios.BeneficiosFragment">
+
+        <!--PROGRESS BAR-->
+        <include
+            android:id="@+id/pb_beneficios"
+            layout="@layout/progress_bar" />
+
+        <!--LISTA SOLICITUDES-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_beneficios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/beneficios_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            style="@style/emptyState"
+            android:id="@+id/ib_empty_beneficios"
+            tools:ignore="UseCompoundDrawables"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:src="@drawable/empty_beneficios"
+                android:contentDescription="@string/imagenemptystate"/>
+            <TextView
+                style="@style/emptyStateTexto"
+                android:text="@string/beneficios_emptystate"/>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/fab"
+            android:id="@+id/fab_solicitudes"/>
+    </RelativeLayout>
+</layout>

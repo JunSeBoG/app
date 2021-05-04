@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.solicitudes.vacaciones.VacacionesVisualizarInterrupcionesFragment">
+
+        <!--PROGRESS BAR -->
+        <include
+            android:id="@+id/pb_vacaciones"
+            layout="@layout/progress_bar"
+            android:visibility="invisible" />
+
+        <!--LISTA EXPERIENCIAS-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_vacaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_vacaciones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            android:id="@+id/ll_empty_vacaciones"
+            style="@style/emptyState"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:contentDescription="@string/imagenemptystate"
+                android:src="@drawable/empty_interrupciones_de_vacaciones" />
+
+            <TextView
+                style="@style/emptyStateTexto"
+                android:text="@string/empty_solicitud_vacaciones_interrupcion" />
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

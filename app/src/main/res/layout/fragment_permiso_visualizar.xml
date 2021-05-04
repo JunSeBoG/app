@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="solicitudpermiso"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudPermiso" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.permisos.PermisosVisualizarFragment">
+
+        <!--PROGRESS BAR -->
+        <include
+            android:id="@+id/pb_solicitud_permiso"
+            layout="@layout/progress_bar"
+            android:visibility="gone" />
+
+        <!--VISUALIZACION-->
+        <ScrollView
+            android:id="@+id/sv_solicitud_permiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/visualizacion_permisos"
+                style="@style/contenedorBloques"
+                android:visibility="visible">
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/clase_permiso" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.claseAusentismoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tipo_permiso" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.tipoAusentismoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fecha_de_inicio" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.fechaInicio}" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fecha_fin" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.fechaFin}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hora_de_salida" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="time"
+                            android:text="@{solicitudpermiso.campoVacio(solicitudpermiso.horaSalida)}" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hora_de_llegada" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.campoVacio(solicitudpermiso.horaLlegada)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_soporte_permiso"
+                    style="@style/bloqueSolo">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soporte" />
+
+                    <TextView
+                        android:id="@+id/tv_nohay_soporte_permiso_formulario"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_soportePermiso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="10dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llProrrogaDe"
+                    style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/observaciones" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.campoVacio(solicitudpermiso.observaciones)}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estado" />
+
+                        <TextView
+                            android:id="@+id/permiso_estado"
+                            style="@style/chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.estado}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llJustificacion"
+                    style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/respuesta_a_la_solicitud" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitudpermiso.campoVacio(solicitudpermiso.justificacion)}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_aprobar"
+            style="@style/fab"
+            android:layout_above="@id/fab_cancelar"
+            android:layout_alignParentBottom="false"
+            android:backgroundTint="@color/verde_pera"
+            android:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_cancelar"
+            style="@style/fab"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/rojo"
+            android:src="@drawable/ic_block"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</layout>

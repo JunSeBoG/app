@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="incapacidad"
+            type="com.alcanosesp.appalcanos.db.entity.AusentismoFuncionario" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.incapacidades.IncapacidadFormularioFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/formulario_experiencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_de_incapacidad_requerido" />
+
+                    <Spinner
+                        android:id="@+id/et_incapacidad_tipo"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_tipo"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/codigo_del_diagn_stico_requerido" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_incapacidad_diagnostico"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@{incapacidad.diagnosticoCieCodigo}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_diagnostico"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_experiencia_fechainicio_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_incapacidad_fecha_inicio"
+                        style="@style/campoFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{incapacidad.fechaInicio}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_fechainicio"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fecha_fin_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_incapacidad_fecha_fin"
+                        style="@style/campoFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{incapacidad.fechaFin}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_fecha_fin"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prorroga_de_requerido" />
+
+                    <Spinner
+                        android:id="@+id/et_incapacidad_prorroga_de"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_prorroga_de"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/numero_de_incapacidad_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_incapacidad_numero"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text="@{incapacidad.numeroIncapacidad}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_numero"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soporte_requerido" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/et_incapacidad_label_adjunto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:text="@string/soporte_de_la_incapacidad"
+                            android:drawableEnd="@drawable/ic_attach_file"
+                            android:drawableTint="@color/gris_claro_linea"
+                            android:drawablePadding="55dp"/>
+
+                        <TextView
+                            android:id="@+id/et_incapacidad_adjunto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="52dp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/msg_error_incapacidad_adjunto"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_guardar_incapacidad"
+                    style="@style/botonConfirmacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="funcionario"
+            type="com.alcanosesp.appalcanos.db.entity.Funcionario" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgFuncionario"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/empty_personaje"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/nav_header_desc"
+            android:onClick="irA"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="0.5dp" />
+
+        <!--<ImageView
+            android:id="@+id/imgFuncionario"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="irA"
+            android:paddingTop="5dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/yeimi" />-->
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHeaderMenuNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_regular"
+                android:gravity="center"
+                android:text="@{funcionario.nombreCorto()}"
+                android:textColor="@color/blanco"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_incapacidades"
+            app:destination="@id/nav_incapacidades" />
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_datos_personales"
+            app:destination="@id/nav_datos_personales" />
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_solicitudes"
+            app:destination="@id/nav_solicitudes" />
+        <action
+            android:id="@+id/action_nav_inicio_to_nav_consultas"
+            app:destination="@id/nav_consultas" />
+        <action
+            android:id="@+id/action_nav_inicio_to_cesantiasFragment"
+            app:destination="@id/cesantiasFragment" />
+        <action
+            android:id="@+id/action_nav_inicio_to_perfilActivity"
+            app:destination="@id/perfilActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_consultas"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.consultas.ConsultasFragment"
+        android:label="@string/menu_consultas"
+        tools:layout="@layout/fragment_consultas" >
+        <action
+            android:id="@+id/action_nav_consultas_to_certificadoLaboralFragment3"
+            app:destination="@id/certificadoLaboralFragment3" />
+        <action
+            android:id="@+id/action_nav_consultas_to_desprendiblesFragment"
+            app:destination="@id/desprendiblesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_datos_personales"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.DatosPersonalesFragment"
+        android:label="@string/menu_datos_personales"
+        tools:layout="@layout/fragment_datos_personales" >
+        <action
+            android:id="@+id/action_datos_personales_to_experienciaFormularioFragment"
+            app:destination="@id/experienciaFormularioFragment" />
+        <action
+            android:id="@+id/action_nav_datos_personales_to_estudioFormularioFragment"
+            app:destination="@id/estudioFormularioFragment" />
+        <action
+            android:id="@+id/action_nav_datos_personales_to_familiaresFormularioFragment"
+            app:destination="@id/familiaresFormularioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_incapacidades"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.incapacidades.IncapacidadesFragment"
+        android:label="@string/menu_incapacidades"
+        tools:layout="@layout/fragment_incapacidades" >
+        <action
+            android:id="@+id/action_nav_incapacidades_to_incapacidadFormularioFragment"
+            app:destination="@id/incapacidadFormularioFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/experienciaFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.ExperienciaFormularioFragment">
+        <action
+            android:id="@+id/action_experienciaFormularioFragment_to_datos_personales"
+            app:destination="@id/nav_datos_personales"
+            app:popUpTo="@id/nav_datos_personales"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/estudioFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.EstudioFormularioFragment">
+        <action
+            android:id="@+id/action_estudioFormularioFragment_to_nav_datos_personales"
+            app:destination="@id/nav_datos_personales"
+            app:popUpTo="@id/nav_datos_personales"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/familiaresFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.datos_personales.datos_basicos.FamiliarFormularioFragment">
+        <action
+            android:id="@+id/action_familiaresFormularioFragment_to_nav_datos_personales"
+            app:destination="@id/nav_datos_personales"
+            app:popUpTo="@id/nav_datos_personales"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/incapacidadFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.incapacidades.IncapacidadFormularioFragment"
+        tools:layout="@layout/fragment_incapacidad_formulario">
+        <action
+            android:id="@+id/action_incapacidadFormularioFragment_to_nav_incapacidades2"
+            app:destination="@id/nav_incapacidades"
+            app:popUpTo="@id/nav_incapacidades"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/certificadoLaboralFragment3"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.certificados_desprendibles.CertificadoLaboralFragment"
+        android:label="Certificado laboral" />
+
+    <fragment
+        android:id="@+id/nav_solicitudes"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.SolicitudesFragment"
+        android:label="Solicitudes"
+        tools:layout="@layout/fragment_solicitudes" >
+        <action
+            android:id="@+id/action_solicitudesFragment_to_permisoListaFragment"
+            app:destination="@id/permisoFragment" />
+        <action
+            android:id="@+id/action_solicitudesFragment_to_beneficiosFragment"
+            app:destination="@id/beneficiosFragment" />
+        <action
+            android:id="@+id/action_nav_solicitudes_to_cesantiasFragment"
+            app:destination="@id/cesantiasFragment" />
+        <action
+            android:id="@+id/action_nav_solicitudes_to_vacacionesFragment"
+            app:destination="@id/vacacionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beneficiosFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.beneficios.BeneficiosFragment"
+        android:label="Solicitud de beneficios">
+        <action
+            android:id="@+id/action_beneficiosFragment_to_beneficioVisualizarFragment"
+            app:destination="@id/beneficioVisualizarFragment" />
+        <action
+            android:id="@+id/action_beneficiosFragment_to_beneficioFormularioFragment"
+            app:destination="@id/beneficioFormularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permisoFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.permisos.PermisoFragment"
+        android:label="Solicitud de permisos" >
+        <action
+            android:id="@+id/action_permisoFragment_to_permisoVisualizarFragment"
+            app:destination="@id/permisoVisualizarFragment" />
+        <action
+            android:id="@+id/action_permisoFragment_to_permisoFormularioFragment"
+            app:destination="@id/permisoFormularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beneficioVisualizarFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.beneficios.BeneficioVisualizarFragment"
+        android:label="Visualizar solicitud">
+        <action
+            android:id="@+id/action_beneficioVisualizarFragment_to_beneficiosFragment"
+            app:destination="@id/beneficiosFragment"
+            app:popUpTo="@id/beneficiosFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beneficioVisualizarFragment_to_beneficioFormularioFragment"
+            app:destination="@id/beneficioFormularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beneficioFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.beneficios.BeneficioFormularioFragment">
+        <action
+            android:id="@+id/action_beneficioFormularioFragment_to_beneficiosFragment"
+            app:destination="@id/beneficiosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permisoVisualizarFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.permisos.PermisoVisualizarFragment"
+        android:label=" Visualizar solicitud">
+        <action
+            android:id="@+id/action_permisoVisualizarFragment_to_permisoFormularioFragment"
+            app:destination="@id/permisoFormularioFragment" />
+        <action
+            android:id="@+id/action_permisoVisualizarFragment_to_permisoFragment"
+            app:destination="@id/permisoFragment"
+            app:popUpTo="@id/permisoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_permisoVisualizarFragment_to_permisoSoporteFragment"
+            app:destination="@id/permisoSoporteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permisoFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.permisos.PermisoFormularioFragment"
+        android:label="Registar solicitud"
+        tools:layout="@layout/fragment_permiso_formulario">
+        <action
+            android:id="@+id/action_permisoFormularioFragment_to_permisoFragment"
+            app:destination="@id/permisoFragment"
+            app:popUpTo="@id/permisoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_permisoFormularioFragment_to_permisoSoporteFragment"
+            app:destination="@id/permisoSoporteFragment"
+            app:popUpTo="@id/permisoFormularioFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/permisoSoporteFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.permisos.PermisoSoporteFragment"
+        android:label="Cargar soporte">
+        <action
+            android:id="@+id/action_permisoSoporteFragment_to_permisoFragment"
+            app:destination="@id/permisoFragment"
+            app:popUpTo="@id/permisoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cesantiasFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.cesantias.CesantiasFragment"
+        android:label="Solicitud de cesantías"
+        tools:layout="@layout/fragment_cesantias">
+        <action
+            android:id="@+id/action_cesantiasFragment_to_cesantiasVisualizarFragment"
+            app:destination="@id/cesantiasVisualizarFragment" />
+        <action
+            android:id="@+id/action_cesantiasFragment_to_cesantiasFormularioFragment"
+            app:destination="@id/cesantiasFormularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cesantiasVisualizarFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.cesantias.CesantiasVisualizarFragment"
+        android:label="Visualizar solicitud"
+        tools:layout="@layout/fragment_cesantias_visualizar">
+        <action
+            android:id="@+id/action_cesantiasVisualizarFragment_to_cesantiasFragment"
+            app:destination="@id/cesantiasFragment" />
+        <action
+            android:id="@+id/action_cesantiasVisualizarFragment_to_cesantiasFormularioFragment"
+            app:destination="@id/cesantiasFormularioFragment"
+            app:popUpTo="@id/cesantiasFormularioFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cancelar_cesantiasVisualizarFragment_to_cesantiasFragment2"
+            app:destination="@id/cesantiasFragment"
+            app:popUpTo="@id/cesantiasFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cesantiasFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.cesantias.CesantiasFormularioFragment"
+        android:label="CesantiasFormularioFragment" >
+        <action
+            android:id="@+id/action_cesantiasFormularioFragment_to_cesantiasFragment"
+            app:destination="@id/cesantiasFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/perfilActivity"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.perfil.PerfilActivity"
+        android:label="PerfilActivity" />
+    <fragment
+        android:id="@+id/vacacionesFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.vacaciones.VacacionesFragment"
+        android:label="Solicitud de vacaciones" >
+        <action
+            android:id="@+id/action_vacacionesFragment_to_vacacionesVisualizarFragment"
+            app:destination="@id/vacacionesVisualizarFragment" />
+        <action
+            android:id="@+id/action_vacacionesFragment_to_vacacionesFormularioFragment"
+            app:destination="@id/vacacionesFormularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacacionesFormularioFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.vacaciones.VacacionesFormularioFragment"
+        android:label="Solicitud"
+        tools:layout="@layout/fragment_vacaciones_formulario" >
+        <action
+            android:id="@+id/action_vacacionesFormularioFragment_to_vacacionesFragment"
+            app:destination="@id/vacacionesFragment"
+            app:popUpTo="@id/vacacionesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacacionesVisualizarFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.vacaciones.VacacionesVisualizarFragment"
+        android:label="Visualizar solicitud"
+        tools:layout="@layout/fragment_vacaciones_visualizar" >
+        <action
+            android:id="@+id/action_vacacionesVisualizarFragment_to_vacacionesFormularioFragment"
+            app:destination="@id/vacacionesFormularioFragment" />
+        <action
+            android:id="@+id/action_cancelar_vacacionesVisualizarFragment_to_vacacionesFragment"
+            app:destination="@id/vacacionesFragment"
+            app:popUpTo="@id/vacacionesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/desprendiblesFragment"
+        android:name="com.alcanosesp.appalcanos.ui.menulateral.consultas.desprendibles.DesprendiblesFragment"
+        android:label="Desprendibles de pago" />
+
+</navigation>

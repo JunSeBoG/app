@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="solicitud"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudBeneficio" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.alcanosesp.appalcanos.ui.menulateral.solicitudes.beneficios.BeneficioVisualizarFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/contenedorBloques">
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha de solicitud" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.fechaSolicitud}"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de beneficio" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.tipoBeneficioNombre}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/horas_por_semana"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cantidad de horas por semana" />
+                        <TextView
+                            android:id="@+id/cantidad_horas_semana"
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.cantidadHoraSemana}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/plazovalor"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq"
+                        android:id="@+id/valor_solicitado"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valor solicitado" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{"$ " + solicitud.moneda(solicitud.valorSolicitud)}'/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer"
+                        android:id="@+id/plazo_meses"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plazo máximo" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.plazoMaximo}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/periodo_pago"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Periodicidad" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.tipoPeriodoNombre}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/opcion_auxilio_educativo"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Opción" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.opcionAuxilio(solicitud.opcionAuxilioEducativo)}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/valores_autorizados"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valor autorizado" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{"$ " + solicitud.valoresAutorizados(solicitud.valorAutorizado)}'/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valor de la cuota" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{"$ " + solicitud.valoresAutorizados(solicitud.valorCobrar)}'/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/fecha_estudios"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha inicio estudio" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.fechaInicioEstudio}"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha fin estudio" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.fechaFinalizacionEstudio}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estado_registro" />
+                        <TextView
+                            style="@style/chip"
+                            android:id="@+id/solicitud_estado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.estado(solicitud.estado)}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/requisitos_beneficio"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Requisitos" />
+                        <LinearLayout
+                            android:id="@+id/requisitos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Observaciones" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.campoVacio(solicitud.observacion)}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/grupo_obs_aprobacion"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Respuesta a la solicitud" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.observacionAprobacion}"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/bloque"
+                    android:id="@+id/grupo_obs_autorizacion"
+                    android:visibility="gone">
+                    <LinearLayout
+                        style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Respuesta a la solicitud" />
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{solicitud.observacionAutorizacion}"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/fab"
+            android:id="@+id/fab_editar_solicitud"
+            android:layout_above="@id/fab_cancelar_solicitud"
+            android:layout_alignParentBottom="false"
+            android:src="@drawable/ic_edit"
+            android:visibility="gone"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/fab"
+            android:id="@+id/fab_cancelar_solicitud"
+            android:backgroundTint="@color/rojo"
+            android:src="@drawable/ic_block"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+</layout>

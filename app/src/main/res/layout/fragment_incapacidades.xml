@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="incapacidad"
+            type="com.alcanosesp.appalcanos.db.entity.AusentismoFuncionario" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.menulateral.incapacidades.IncapacidadesFragment">
+
+        <!--PROGRESS BAR-->
+        <include
+            android:id="@+id/pb_incapacidads"
+            layout="@layout/progress_bar" />
+
+        <!--LISTA EXPERIENCIAS-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_incapaciad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ib_incapacidad_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--EMPTY STATE-->
+        <LinearLayout
+            style="@style/emptyState"
+            android:id="@+id/ib_empty_incapacidad"
+            tools:ignore="UseCompoundDrawables"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/emptyStateImg"
+                android:contentDescription="@string/imagenemptystate"
+                android:src="@drawable/empty_incapacidades" />
+
+            <TextView style="@style/emptyStateTexto"
+                android:text="@string/empty_incapacidades"/>
+        </LinearLayout>
+
+        <!--VISUALIZACION-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/visualizacion_incapacidad"
+                style="@style/contenedorBloques"
+                android:visibility="gone">
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tipo_de_incapacidad" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.tipoAusentismoNombre}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/codigo_del_diagn_stico" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.diagnosticoCieCodigo}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueIzq">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fecha_de_inicio" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.fechaInicio}" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/bloqueDer">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fecha_fin" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.fechaFin}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProrrogaDe"
+                    style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prorroga_de" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.prorrogaDe}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numero_de_incapacidad" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.numeroIncapacidad}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soporte" />
+
+                        <TextView
+                            android:id="@+id/tvSoporteIncapacidad"
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_save_alt"
+                            android:drawablePadding="55dp"
+                            android:drawableTint="@color/gris_claro_linea"
+                            android:text="@string/soporte_de_la_incapacidad" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estado" />
+
+                        <TextView
+                            android:id="@+id/incapacidad_estado"
+                            style="@style/chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.estado}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llJustificacion"
+                    style="@style/bloque">
+
+                    <LinearLayout style="@style/bloqueSolo">
+
+                        <TextView
+                            style="@style/InfoBasicaTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Respuesta a la Solicitud" />
+
+                        <TextView
+                            style="@style/InfoBasicaTexto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{incapacidad.justificacion}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_aprobar"
+            style="@style/fabEditar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_cancelar"
+            style="@style/fabCancelar" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cesantias"
+            type="com.alcanosesp.appalcanos.db.entity.SolicitudCesantia" />
+
+        <variable
+            name="datoscesantias"
+            type="com.alcanosesp.appalcanos.model.DatosCesantias" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.menulateral.solicitudes.cesantias.CesantiasFormularioFragment">
+
+        <include
+            android:id="@+id/pb_cesantias_forulario"
+            layout="@layout/progress_bar"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/sv_cesantias_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/formulario_solicitud_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/base_calculo_de_cesantias" />
+
+                    <TextView
+                        android:id="@+id/tv_base_calculo_cesantias"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{"$ "+datoscesantias.moneda( datoscesantias.baseCesantias)}' />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dias_causados" />
+
+                    <TextView
+                        android:id="@+id/tv_dias_causados_cesantias"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{datoscesantias.cantidadDiasAcumulados}' />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor_acumulado" />
+
+                    <TextView
+                        android:id="@+id/tv_valor_acumulado_cesantias"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{"$ "+ datoscesantias.moneda(datoscesantias.valorCesantiasAcumuladas)}' />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/intereses_causados" />
+
+                    <TextView
+                        android:id="@+id/tv_intereses_causados_cesantias"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{"$ "+ datoscesantias.moneda(datoscesantias.valorInteresCesantiasAcumuladas)}' />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/anticipos_solicitados" />
+
+                    <TextView
+                        android:id="@+id/tv_anticipo_solicitado_cesantias"
+                        style="@style/InfoBasicaTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{"$ "+ datoscesantias.moneda( datoscesantias.anticiposSolicitados)}' />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/motivo_solicitud_requerido" />
+
+                    <Spinner
+                        android:id="@+id/s_motivo_solicitud_cesantias"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/msg_error_motivo_solicitud_cesantias"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor_solicitado_requerido" />
+
+                    <me.abhinay.input.CurrencyEditText
+                        android:id="@+id/tv_valor_solicitado_cesantias"
+                        style="@style/campoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789."
+                        android:inputType="number"
+                        android:text='@{cesantias.moneda(cesantias.valorSolicitado)}' />
+
+                    <TextView
+                        android:id="@+id/msg_error_valor_solicitado_cesantias"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_cargar_soporte_cesantias"
+                    style="@style/bloqueSolo">
+
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soporte_requerido" />
+
+                    <TextView
+                        android:id="@+id/tvLabelCargarSoporte"
+                        style="@style/labelSoporteFormulario"
+                        android:text="@string/soporte_de_anticipo" />
+
+                    <TextView
+                        android:id="@+id/msg_error_adjunto_cesantias"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_soporte_cesantias"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{cesantias.soporte}"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/itemEdicionTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/InfoBasicaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/observaciones_requerido" />
+
+                    <EditText
+                        android:id="@+id/et_solicitud_permiso_observacion"
+                        style="@style/campoTextoArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{cesantias.observacion}" />
+
+                    <TextView
+                        android:id="@+id/msg_error_observacion_cesantias"
+                        style="@style/mensajeErrorEdicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_guardar_cesantias"
+                    style="@style/botonConfirmacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
